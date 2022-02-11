@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.class1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    background-color: black;}
+
+.contact {
+    display: flex;
+    align-content: flex-end;
+    margin-left: 180px;
+}
+
+
+.class1 a{
+    margin-left: 30px;
+    color: wheat;
+}
+
+#logo {
+    margin-left: 0px;
+}
+
+.navbar {
+    display: flex;
+    color: black;
+    background-color: rgb(182, 12, 12);
+    text-decoration: none;
+    list-style: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+li, li a{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 68px;
+    color: seashell;
+    text-decoration: none;
+}
+body{
+    text-align: center;
+
+}
+#carrousel {
+    height: 400px;
+    width: 1300px;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
+    position: relative;
+    margin-left: 25px;
+    overflow: hidden;
+
+
+}
+
+#container {
+    width: 1300px;
+    height: 400px;
+}
+
+.photo {
+    width: 1300px;
+    height: 400px;
+    margin: 0;
+    display: inline-block;
+    background-size: cover;
+}
+
+.bouton {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    top: 150px;
+}
+
+#g {
+    left: 0;
+    opacity: 0.4;
+    transform: rotate(180deg);
+    transition: all 0.3s ease;
+}
+
+#d {
+    right: 0;
+    opacity: 0.4;
+    transform: rotate(0deg);
+    transition: all 0.3s ease;
+}
+
+#g:hover {
+    transform:rotate(180deg) scale(1.1);
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+#d:hover {
+    transform:rotate(0deg) scale(1.1);
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+.container img {
+    height: 400px;
+    width: 1300px;
+
+}
+
+.contentbody{
+    text-align: center;
+    align-items: center;
+
+}
+
+#historique {
+margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 80px;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    text-align: center;
+    width: 1200px;
+}
+#restaurant{
+    margin-top: 20px;
+    margin-left: 80px;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    text-align: center;
+    width: 1200px;
+}
+
+.imaages{
+    margin-top: 20px;
+    display: flex;
+}
+ #chefs{
+    margin-top: 20px;
+    overflow: hidden;
+    text-align: center;
+ }
+ #terasse {
+     margin-top: 25px;
+ }
+
+
+.card{
+    margin-top: 40px;
+    margin-left: 20px;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,.03);
+    border-radius: 6px;
+    overflow: hidden;
+    max-width: 311px;
+    z-index: 2;
+    position: relative;
+    display: block;
+    color: #747474;
+}
+
+.boximages{
+    margin-left: 40px;
+    display: flex;
+}
+.menu
+{
+margin-top: 30px;
+margin-right: 60px;
+margin-left: 20px;
+position: relative;
+overflow: hidden;
+}
+
+.imagesmenu{
+    margin-left: 120px;
+    margin-right: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+#chefs{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+
+#salim, #taisir {
+    margin-top: 25px;
+    margin-left: 240px;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
+}
+
+
+body h2, #total-price {
+    margin-right: 245px;
+    margin-left: 200px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
+}

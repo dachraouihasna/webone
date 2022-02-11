@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+
+
+    <div class="class1">
+        <a id="logo" href="index.html"> <img src="images/logo.jpg" width="170px" height="100px" alt=""></a>
+        <div class="contact">
+            <a href="#"> <span class="fa fa-phone"> +216 50170632 </span></a>
+            <a href="#"> <span class="fa fa-envelope-o"> retsaurant.tunisian@gmail.com</span></a>
+            <a href="#"> <span class="fa fa-map-marker"> Les Berges Du Lac</span></a>
+        </div>
+    </div>
+</head>
+
+<body>
+
+    <header>
+        <ul class="navbar">
+            <li><a href="index.html"> Home </a></li>
+            <li><a href="aboutus.html"> About Us
+                    <!--
+                    <select name="informations" id="list1" onload="liste()">
+                        <option><a href="chefs"> Nos Chefs</a></option>
+                        <option><a href="historique"> Notre Historique</a></option>
+                    </select>  -->
+                </a></li>
+            <li><a href="menu.html"> Menu</a></li>
+            <li><a href="local"> Eat In</a></li>
+            <li><a href="order.html"> Take Away/Order Online</a></li>
+            <li><a href="contact.html"> Contact Us</a></li>
+        </ul>
+    </header> <br><br>
+    <h3> Pour Confirmer votre commande, Merci de remplir les champs suivants : </h3>
+    <br><br>
+    <form name="formulaire">
+        <label for="nom"><i> Nom:</i> </label>
+        <input type="text" name="nom" id="nom" size="20"><br>
+        <br>
+        <label for="prenom"><i> Prénom:</i> </label>
+        <input type="text" name="prenom" id="prenom" size="20"><br>
+        <br>
+
+        <label for="adresse"><i>Adresse :</i> </label>
+        <input type="text" name="adr" id="cin" size="40"><br>
+        <br>
+
+
+        <label for="liste"><i>Ville:</i></label>
+        <SELECT name="pays" id="liste" onload="liste()">
+
+            <OPTION> Tunis</OPTION>
+            <OPTION> Ariana</OPTION>
+            <OPTION> Ben Arous </OPTION>
+            <OPTION> Manouba </OPTION>
+            <OPTION> Autres </OPTION>
+        </SELECT><br>
+        <br>
+
+        <label for="cp"> <i>Code Postal :</i></label>
+        <input type="number" name="naissance" id="nais"><br>
+        <br>
+
+        <label for="mail"><i> E-mail:</i> </label>
+        <input type="mail" name="adressemail" id="mail" onload='verifmail()'><br>
+        <br>
+        <label for="numtel"><i> Téléphone:</i> </label>
+        <input type="tel" name="numerotel" id="numtel"><br>
+        <br>
+        <label for="numtel"><i> Téléphone 2:</i> </label>
+        <input type="tel" name="numerotel" id="numtel"><br>
+        <br>
+
+        <input type="submit" value="Confirmer" onclick='verifmail()'>
+        <input type="reset" value="Annuler">
+    </form>
+    <script src="index.js"></script>
+</body>
