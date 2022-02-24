@@ -1,9 +1,9 @@
+var g = document.getElementById("g");
+var d = document.getElementById("d");
+var nbr = 3;
+var p = 0;
 document.body.onload = function () {
-    const nbr = 3;
-    const p = 0;
     const container = document.getElementById("container");
-    const g = document.getElementById("g");
-    const d = document.getElementById("d");
     container.style.width = (1300 * nbr) + "px";
     for (let i = 1; i <= nbr; i++) {
         const div = document.createElement("div");
@@ -13,7 +13,8 @@ document.body.onload = function () {
     };
 
     g.onclick = function () {
-        if (p > (-nbr + 1)) {
+        if (p > -nbr + 1) {
+
             p--;
             container.style.transform = "translate(" + p * 1300 + "px)";
         }
@@ -21,8 +22,8 @@ document.body.onload = function () {
 
 
     d.onclick = function () {
-        if (p > nbr) {
-            p--;
+        if (p < nbr) {
+            p++;
             container.style.transform = "translate(" + p * 1300 + "px)";
         }
     }
@@ -85,28 +86,55 @@ for (let i = 0; i < btnminus.length; i++) {
         for (let i = 0; i < prices.length; i++) {
             sum += qt[i].value * prices[i].innerHTML;
         }
-        document.getElementById("finalPrice").innerHTML = sum 
+        document.getElementById("finalPrice").innerHTML = sum
     }
 
-    function verifmail()
-    {
-    const m=formulaire.mail.value;
-    if(( m.indexOf('@') != -1) &&( m.indexOf('.')!= -1))
-    { alert("mail valide");
-     return true;}
-    
-    else { alert("Votre adresse mail est invalide !");}
-    }
-    
-    function liste()
-    
-    { const l=formulaire.liste;
-    if (l.selectedIndex==0)
-    { alert("Le nom de votre ville est Obligatoire !");
-     return false;
-    }
-    }
-    
+
 }
+
+
+
+document.getElementById("confmail").addEventListener("input", function () {
+    var pErreur = document.getElementById("erreur");
+    if (this.value != document.getElementById("mail").value) {
+        pErreur.innerHTML = "Les deux adresses mail ne correpondent pas !"
+    } else {
+        pErreur.innerHTML = "";
+    }
+});
+
+function verifmail() {
+    const mail = contact.mail.value;
+    if ((mail.indexOf('@') != -1) && (mail.indexOf('.') != -1)) {
+        alert("votre adresse mail est validée ");
+        return true;
+    }
+
+    else { alert("Votre adresse mail est invalide !"); }
+}
+
+document.getElementById("formulaire").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var erreur;
+
+    var inputs = document.getElementsByTagName("input");
+    for (var i = 0; i < inputs.length; i++) {
+        if (!inputs[i].value) {
+            erreur = "Veuillez remplir tous les champs"
+        }
+    };
+
+    if (erreur) {
+        e.preventDefault()
+        document.getElementById("erreur").innerHTML = erreur;
+        return false;
+    } else {
+
+        alert('Commande enregistrée !');
+    }
+});
+
+
+
 
 
